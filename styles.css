@@ -318,3 +318,66 @@ body {
     }
 
 }
+
+
+/* Add these styles to your existing styles.css file */
+
+.legal-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.legal-content h1 {
+    font-size: 2rem;
+    color: #009999;
+    border-bottom: 2px solid #66cc99;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content h2 {
+    font-size: 1.5rem;
+    color: #009999;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content h3 {
+    font-size: 1.2rem;
+    color: #009999;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.legal-content p, .legal-content ul {
+    margin-bottom: 1rem;
+}
+
+.legal-content ul {
+    padding-left: 1.5rem;
+}
+
+.legal-content a {
+    color: #66cc99;
+    text-decoration: none;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .legal-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .legal-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .legal-content h3 {
+        font-size: 1.4rem;
+    }
+}
