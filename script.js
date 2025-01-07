@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+   
     const menuButton = document.querySelector('.mobile-menu-button');
     const mobileNav = document.querySelector('.mobile-nav');
     
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spans[2].style.transform = mobileNav.classList.contains('active') ? 'rotate(-45deg) translate(7px, -7px)' : '';
     });
 
-    // Slideshow
+    
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
 
@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[currentSlide].classList.add('active');
     }
 
-    // Change slide every 5 seconds
+    
     setInterval(showNextSlide, 5000);
 
-    // Update copyright year
+    
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth scroll for navigation links
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -42,13 +42,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
 
-                // Close mobile menu if open
+                
                 if (mobileNav.classList.contains('active')) {
                     mobileNav.classList.remove('active');
                     const spans = menuButton.querySelectorAll('span');
                     spans[0].style.transform = '';
                     spans[1].style.opacity = '1';
                     spans[2].style.transform = '';
+
+
+                    document.addEventListener('DOMContentLoaded', () => {
+                        
+                    
+                        
+                        if (window.location.pathname.includes('impressum-datenschutz.html')) {
+                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                anchor.addEventListener('click', function (e) {
+                                    e.preventDefault();
+                                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                                        behavior: 'smooth'
+                                    });
+                                });
+                            });
+                        }
+                    });
+
+                    
                 }
             }
         });
